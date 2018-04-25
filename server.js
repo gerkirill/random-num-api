@@ -1,7 +1,9 @@
 // не заморачивайтесь, эти 2 строки скопированы из документации
 var express = require('express');
-var app = express();
+var cors = require('cors');
 
+var app = express();
+app.use(cors());
 
 // >>> НАЧАЛО КОДА СЕРВЕРА
 app.get('/randomnum', function (req, res) {
@@ -9,7 +11,6 @@ app.get('/randomnum', function (req, res) {
   res.send({ message: randomNum });
 });
 // >>> КОНЕЦ КОДА СЕРВЕРА
-
 
 // не заморачивайтесь, эти 3 строки скопированы из документации
 app.listen(3000, function () {
